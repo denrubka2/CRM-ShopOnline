@@ -6,58 +6,36 @@
   <title>Проект CRM-ShopOnline</title>
 </head>
 <body>
-  <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+  <form action="https://jsonplaceholder.typicode.com/posts" method="POST" name="addProduct">
     <h2>Добавить товар</h2>
     <fieldset>
-      <label>
-        Наименование
-        <br>
-        <input type="text" name="name">
-      </label>
-      <br>
-      <label>
-        Категория
-        <br>
-        <input type="text" name="category">
-      </label>
-      <br>
-      <label>
-        Единицы измерения
-        <br>
-        <input type="text" name="units">
-      </label>
-      <br>
-      <label>
-        Дисконт
-        <br>
-        <input type="checkbox">
-        <input type="text" disabled>
-      </label>
-      <br>
-      <label>
-        Описание
-        <br>
-        <textarea cols="21" rows="2" name="description"></textarea>
-      </label>
-      <br>
-      <label>
-        Количество
-        <br>
-        <input type="number" name="count">
-      </label>
-      <br>
-      <label>
-        Цена
-        <br>
-        <input type="number" name="price">
-      </label>
-      <br>
-      <br>
-      <label>
-        <input type="file" name="image">
-      </label>
+      <label for="name">Наименование</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="category">Категория</label>
+      <input type="text" name="category" id="category" required>
+
+      <label for="units">Единицы измерения</label>
+      <input type="text" name="units" id="units" required>
+
+      <div>
+        <label for="discount">Дисконт</label>
+        <input type="checkbox" aria-label="Активирует скидку">
+        <input type="text" name="discount" id="discount" disabled required>
+      </div>
+
+      <label for="description">Описание</label>
+      <textarea rows="5" name="description" id="description" required></textarea>
+
+      <label for="count">Количество</label>
+      <input type="number" name="count" id="count" required>
+
+      <label for="price">Цена</label>
+      <input type="number" name="price" id="price" required>
+
+      <input type="file" name="image" aria-label="Фото товара" required>
     </fieldset>
-    <br>
+
     <button type="submit">Добавить товар</button>
   </form>
 </body>
